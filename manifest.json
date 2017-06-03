@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Hide Order History",
+  "description": "Amazonの非表示にした注文の表示を隠します。",
+  "version": "1.0.1",
+  "icons": {
+    "16": "image/icon/16.png",
+    "64": "image/icon/64.png"
+  },
+  "page_action": {
+    "default_icon": "image/icon/16.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.amazon.co.jp/*"
+      ],
+      "js": [
+        "js/jquery-2.2.3.min.js",
+        "js/content_scripts.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}
